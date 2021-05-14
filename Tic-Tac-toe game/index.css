@@ -1,0 +1,178 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .board .cell.x::before, body .board .cell.x::after, body .board.x .cell:not(.x):not(.circle):hover::before,
+body .board.x .cell:not(.x):not(.circle):hover::after {
+  content: "";
+  display: block;
+  width: 10%;
+  height: 80%;
+  position: absolute;
+}
+
+body .board .cell.circle::before, body .board .cell.circle::after, body .board.circle .cell:not(.x):not(.circle):hover::before,
+body .board.circle .cell:not(.x):not(.circle):hover::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .board {
+  width: 400px;
+  height: 400px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (33.333%)[3];
+      grid-template-columns: repeat(3, 33.333%);
+}
+
+body .board .cell {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid black;
+  position: relative;
+}
+
+body .board .cell:first-child, body .board .cell:nth-child(2), body .board .cell:nth-child(3) {
+  border-top: none;
+}
+
+body .board .cell:first-child, body .board .cell:nth-child(4), body .board .cell:nth-child(7) {
+  border-left: none;
+}
+
+body .board .cell:nth-child(3), body .board .cell:nth-child(6), body .board .cell:last-child {
+  border-right: none;
+}
+
+body .board .cell:nth-child(7), body .board .cell:nth-child(8), body .board .cell:last-child {
+  border-bottom: none;
+}
+
+body .board .cell.x::before, body .board .cell.x::after {
+  background-color: red;
+}
+
+body .board .cell.x::before {
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+body .board .cell.x::after {
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+}
+
+body .board .cell.circle::before {
+  width: 80%;
+  height: 80%;
+  background-color: red;
+}
+
+body .board .cell.circle::after {
+  width: 60%;
+  height: 60%;
+  background-color: #fff;
+}
+
+body .board.x .cell:not(.x):not(.circle):hover::before,
+body .board.x .cell:not(.x):not(.circle):hover::after {
+  background-color: #ffb1b1;
+}
+
+body .board.x .cell:not(.x):not(.circle):hover::before {
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+body .board.x .cell:not(.x):not(.circle):hover::after {
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+}
+
+body .board.circle .cell:not(.x):not(.circle):hover::before {
+  width: 80%;
+  height: 80%;
+  background-color: #ffb1b1;
+}
+
+body .board.circle .cell:not(.x):not(.circle):hover::after {
+  width: 60%;
+  height: 60%;
+  background-color: #fff;
+}
+
+.winning-message {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.winning-message .winning-text {
+  font-size: 5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.winning-message .reset {
+  width: 200px;
+  height: 60px;
+  border: 1px solid #fff;
+  background-color: black;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.winning-message .reset:hover {
+  border: 1px solid black;
+  background-color: #fff;
+  color: black;
+}
+
+.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=index.css.map */

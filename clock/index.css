@@ -1,0 +1,112 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #091921;
+  overflow: hidden;
+}
+
+.container .clock-panel {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  -webkit-box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.05), inset 0 15px 15px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.05), inset 0 15px 15px rgba(0, 0, 0, 0.05);
+}
+
+.container .clock-panel .clock-number {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+}
+
+.container .clock-panel .second-hand, .container .clock-panel .minute-hand, .container .clock-panel .hour-hand {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.container .clock-panel .second-hand .hand, .container .clock-panel .minute-hand .hand, .container .clock-panel .hour-hand .hand {
+  position: absolute;
+  border-radius: 5px 5px 0 0;
+  left: 50%;
+  bottom: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.container .clock-panel .second-hand .hand {
+  width: 1px;
+  height: 40%;
+  bottom: 43%;
+  background-color: #097ecc;
+}
+
+.container .clock-panel .minute-hand {
+  top: -100%;
+}
+
+.container .clock-panel .minute-hand .hand {
+  width: 4px;
+  height: 30%;
+  background-color: #fff;
+}
+
+.container .clock-panel .hour-hand {
+  top: -200%;
+}
+
+.container .clock-panel .hour-hand .hand {
+  width: 7px;
+  height: 25%;
+  background-color: #ff105e;
+}
+
+.container .clock-panel .hour-hand:after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+}
+
+.container .electronic-clock {
+  width: 200px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 30px;
+  margin: 50px auto;
+  color: #cacaca;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  -webkit-box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.05), inset 0 15px 15px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.05), inset 0 15px 15px rgba(0, 0, 0, 0.05);
+}
+/*# sourceMappingURL=index.css.map */
