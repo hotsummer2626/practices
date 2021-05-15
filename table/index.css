@@ -1,0 +1,25 @@
+form {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  text-align: center;
+}
+
+table {
+  margin: 20px auto;
+  width: 300px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table tr:nth-child(2n) {
+  background-color: #bfa;
+}
+
+table tr th, table tr td {
+  border: 1px solid black;
+  text-align: center;
+  height: 30px;
+}
+/*# sourceMappingURL=index.css.map */

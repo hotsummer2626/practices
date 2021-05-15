@@ -1,0 +1,22 @@
+form{
+    width: max-content;
+    margin: 0 auto;
+    text-align: center;
+}
+
+table{
+    margin: 20px auto;
+    width: 300px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    tr{
+        &:nth-child(2n){
+            background-color: #bfa;
+        }
+        th,td{
+            border: 1px solid black;
+            text-align: center;
+            height: 30px;
+        }
+    }
+}
