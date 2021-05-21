@@ -91,7 +91,7 @@ $box-shadow-style : 0 -15px 15px rgba(255, 255, 255, 0.05),
     }
 
     .electronic-clock{
-        width: 200px;
+        width: max-content;
         height: 80px;
         line-height: 80px;
         border-radius: 30px;

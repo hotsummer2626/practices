@@ -12,8 +12,7 @@ function setTime() {
     secondHand.style.transform = `rotateZ(${secondRatio}deg)`;
     minuteHand.style.transform = `rotateZ(${minuteRatio}deg)`;
     hourHand.style.transform = `rotateZ(${hourRatio}deg)`;
-    electronicClockTextElement.innerText =
-        `${getTime.getHours()} : ${getTime.getMinutes()} : ${getTime.getSeconds()}`
+    electronicClockTextElement.innerText = `${getTime.toTimeString()}`;
 }
 
 clockNumebr.forEach(number => {

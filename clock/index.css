@@ -97,7 +97,9 @@ li {
 }
 
 .container .electronic-clock {
-  width: 200px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   height: 80px;
   line-height: 80px;
   border-radius: 30px;
