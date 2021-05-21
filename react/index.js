@@ -1,40 +1,41 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 
-class Life extends React.Component {
-    state = {
-        opacity: 0.5
-    }
+class NewsList extends React.Component {
 
-    death = () => {
-        ReactDom.unmountComponentAtNode(document.querySelector('#app'));
-    }
+    state = { newArr: [] }
 
     componentDidMount() {
-        this.timer = setInterval(() => {
-            let opacity = this.state.opacity;
-            opacity -= 0.1;
-            if(opacity<= 0) opacity = 1;
-            this.setState({opacity});
-        }, 200)
+        setInterval(() => {
+            const { newArr } = this.state;
+            const news = 'news' + (newArr.length + 1);
+            this.setState({ newArr: [news, ...newArr] });
+        }, 1000);
     }
 
-    componentWillUnmount(){
-        clearInterval(this.timer);
+    getSnapshotBeforeUpdate(){
+        return this.refs.list.scrollHeight;
+    }
+
+    componentDidUpdate(preProps, preState, height){
+        this.refs.list.scrollTop += 30;
     }
 
     render() {
         return (
-            <div>
-                <h2 style={{ opacity: this.state.opacity }}>hhhhhhhhhhh</h2>
-                <button onClick={this.death}>cancel</button>
+            <div className="list" ref='list'>
+                {
+                    this.state.newArr.map((n)=>{
+                    return <div className='news'>{n}</div>;
+                    })
+                }
             </div>
         )
     };
 }
 
 
-ReactDom.render((<Life />), document.querySelector('#app'));
+ReactDom.render((<NewsList />), document.querySelector('#app'));
 
 
 
