@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise_prac</title>
+</head>
+
+<body>
+    <button class="btn">click to draw a lottery</button>
+</body>
+<script>
+    function rand(m, n) {
+        return Math.ceil(Math.random() * (n - m + 1)) + m - 1;
+    }
+
+    const btn = document.querySelector('.btn');
+    btn.addEventListener('click', () => {
+        const p = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                let n = rand(1, 100);
+                if (n <= 30) {
+                    resolve();
+                } else {
+                    reject();
+                }
+            }, 1000);
+        })
+        p.then(() => {
+            alert('congratulation!!!');
+        }, () => {
+            alert('sorry!!!');
+        })
+    })
+</script>
+
+</html>
