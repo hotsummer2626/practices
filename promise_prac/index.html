@@ -21,16 +21,16 @@
             setTimeout(() => {
                 let n = rand(1, 100);
                 if (n <= 30) {
-                    resolve();
+                    resolve(n);
                 } else {
-                    reject();
+                    reject(n);
                 }
             }, 1000);
         })
-        p.then(() => {
-            alert('congratulation!!!');
-        }, () => {
-            alert('sorry!!!');
+        p.then((value) => {
+            alert('congratulation!!! your number is ' + value);
+        }, (reason) => {
+            alert('sorry!!! your number is ' + reason);
         })
     })
 </script>
