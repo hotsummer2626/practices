@@ -11,16 +11,14 @@
 <body>
     <script>
         let p = new Promise((resolve, reject) => {
-            setTimeout(() => {
-                reject('ok');
-            }, 1000);
+            resolve('ok');
+            console.log(111);
         });
-        let res = p.then(value => {
-            console.log(value);
-        }, reason => {
-            console.warn(reason);
-        });
-        console.log(res);
+
+        p.then(v => {
+            console.log(222)
+        })
+        console.log(333);
     </script>
 </body>
 
