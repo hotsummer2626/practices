@@ -1,0 +1,23 @@
+.container .userlist {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+.container .userlist__personalinfo {
+    width: 30%;
+    margin-top: 10px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.container .userlist__personalinfo img {
+    width: 50%;
+    margin-top: 10px;
+    background-color: red;
+}

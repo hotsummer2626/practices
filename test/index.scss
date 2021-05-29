@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+.container{
+    width: 800px;
+    margin: 50px auto;
+    background-color: #bfa;
+    .search{
+        width: 100%;
+        height: 150px;
+        padding-left: 50px;
+        padding-top: 10px;
+        background-color: red;
+        &__input{
+            width: 200px;
+            height: 30px;
+            padding-left: 10px;
+            line-height: 30px;
+        }
+        &__btn{
+            width: 80px;
+            height: 30px;
+            border: none;
+            border-radius: 30px;
+        }
+    }
+    .userlist{
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 10px;
+        justify-content: space-around;
+        &__personalinfo{
+            width: 30%;
+            margin-top: 10px;
+            border: 1px solid black;
+            text-align: center;
+            img{
+                width: 50%;
+                margin-top: 10px;
+                background-color: red;
+            }
+        }
+    }
+}
