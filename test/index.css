@@ -9,55 +9,142 @@ li {
   list-style: none;
 }
 
+body {
+  background-color: yellowgreen;
+}
+
 .container {
   width: 800px;
-  margin: 50px auto;
+  height: 450px;
   background-color: #bfa;
+  margin: 50px auto;
 }
 
-.container .search {
-  width: 100%;
-  height: 150px;
-  padding-left: 50px;
-  padding-top: 10px;
+.container .upper {
+  height: 55%;
+  padding: 45px 50px 0;
   background-color: red;
-}
-
-.container .search__input {
-  width: 200px;
-  height: 30px;
-  padding-left: 10px;
-  line-height: 30px;
-}
-
-.container .search__btn {
-  width: 80px;
-  height: 30px;
-  border: none;
-  border-radius: 30px;
-}
-
-.container .userlist {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding-bottom: 10px;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.container .userlist__personalinfo {
-  width: 30%;
-  margin-top: 10px;
-  border: 1px solid black;
+.container .upper__currentweather {
+  width: 150px;
+  text-align: center;
+  color: #fff;
+}
+
+.container .upper__currentweather__temp {
+  height: 70px;
+  line-height: 60px;
+  font-size: 70px;
+}
+
+.container .upper__currentweather__catagory {
+  text-transform: uppercase;
+}
+
+.container .upper__currentweather__condition {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .upper__currentweather__condition div span {
+  display: block;
+  font-size: 12px;
+}
+
+.container .upper__currentweather__condition div .catagory {
+  text-transform: uppercase;
+}
+
+.container .upper__currentweather__condition .line {
+  width: 2px;
+  height: 30px;
+  background-color: #fff;
+}
+
+.container .upper__currentcity {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.container .upper__currentcity::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 2px;
+  margin: 5px auto;
+  background-color: #fff;
+}
+
+.container .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 45%;
+  background-color: #fff;
+}
+
+.container .bottom__othercities {
+  width: 40%;
+  padding-top: 20px;
+  padding-left: 50px;
+  background-color: #fff;
+}
+
+.container .bottom__othercities__city {
+  margin-top: 20px;
+}
+
+.container .bottom__othercities__city span {
+  margin-right: 20px;
+}
+
+.container .bottom .line {
+  width: 2px;
+  height: 160px;
+  margin-top: 20px;
+  background-color: black;
+}
+
+.container .bottom__nextfivedays {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc(60% - 2px);
+}
+
+.container .bottom__nextfivedays__day {
+  text-align: center;
+  font-size: 20px;
+}
+
+.container .bottom__nextfivedays__day span {
+  width: 100%;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  display: block;
   text-align: center;
 }
 
-.container .userlist__personalinfo img {
-  width: 50%;
-  margin-top: 10px;
-  background-color: red;
+.container .bottom__nextfivedays__day span i {
+  font-size: 30px;
 }
 /*# sourceMappingURL=index.css.map */
