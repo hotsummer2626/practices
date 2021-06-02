@@ -1,0 +1,40 @@
+.container .upper__currentweather {
+  width: 150px;
+  text-align: center;
+  color: #fff;
+}
+
+.container .upper__currentweather__temp {
+  height: 70px;
+  line-height: 60px;
+  font-size: 70px;
+}
+
+.container .upper__currentweather__catagory {
+  text-transform: uppercase;
+}
+
+.container .upper__currentweather__condition {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.container .upper__currentweather__condition div span {
+  display: block;
+  font-size: 12px;
+}
+
+.container .upper__currentweather__condition div .catagory {
+  text-transform: uppercase;
+}
+
+.container .upper__currentweather__condition .line {
+  width: 2px;
+  height: 30px;
+  background-color: #fff;
+}

@@ -1,0 +1,52 @@
+.contact__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.contact__content__left {
+  width: 50%;
+  padding-top: 150px;
+}
+
+.contact__content__left h3 {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.contact__content__left p i {
+  color: yellow;
+}
+
+.contact__content__left p span {
+  color: #fff;
+}
+
+.contact__content__right {
+  width: 50%;
+  padding-top: 70px;
+}
+
+.contact__content__right input {
+  width: 90%;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.contact__content__right textarea {
+  width: 90%;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.contact__content__right button {
+  width: 130px;
+  height: 40px;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  background-color: #1a1a1a;
+}

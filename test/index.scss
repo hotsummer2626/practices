@@ -82,9 +82,15 @@ body {
       padding-left: 50px;
       background-color: #fff;
       &__city {
-        margin-top: 20px;
+        display: flex;
+        height: 40px;
+        line-height: 40px;
         span {
+          display: block;
           margin-right: 20px;
+        }
+        img{
+          width: 50px;
         }
       }
     }

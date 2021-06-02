@@ -7,7 +7,7 @@ export default class Search extends Component {
     search = () => {
         const { keyWordElement: { value: keyWord } } = this;
         this.props.updateAppState({ isFirst: false, isLoading: true });
-        axios.get(`https://api.github.com/search/users234?q=${keyWord}`).then(
+        axios.get(`https://api.github.com/search/users?q=${keyWord}`).then(
             response => {
                 this.props.updateAppState({ isLoading: false, users: response.data.items });
             },

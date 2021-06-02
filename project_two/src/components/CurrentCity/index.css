@@ -1,0 +1,14 @@
+.container .upper__currentcity {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.container .upper__currentcity::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 2px;
+  margin: 5px auto;
+  background-color: #fff;
+}

@@ -1,0 +1,50 @@
+section,
+.main,
+.nav1,
+.nav1__img {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+}
+
+section {
+  height: 100vh;
+  padding: 20px 60px;
+}
+
+.main {
+  width: 100%;
+  padding-left: 350px;
+  background-color: black;
+}
+
+.about__title,
+.education__title,
+.portfolio__title,
+.contact__title {
+  width: 100%;
+  color: yellow;
+  text-align: center;
+  font-size: 50px;
+  border-bottom: 2px solid grey;
+}
+
+.about__title span,
+.education__title span,
+.portfolio__title span,
+.contact__title span {
+  color: #fff;
+}

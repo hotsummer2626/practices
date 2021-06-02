@@ -104,11 +104,20 @@ body {
 }
 
 .container .bottom__othercities__city {
-  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  line-height: 40px;
 }
 
 .container .bottom__othercities__city span {
+  display: block;
   margin-right: 20px;
+}
+
+.container .bottom__othercities__city img {
+  width: 50px;
 }
 
 .container .bottom .line {

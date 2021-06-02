@@ -1,0 +1,15 @@
+.portfolio__content__info {
+  width: 30%;
+  height: 230px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  background-image: url(./img/banner1.jpg);
+  background-repeat: no-repeat;
+  background-size: 250%;
+  -webkit-transition: background-size 0.3s ease;
+  transition: background-size 0.3s ease;
+}
+
+.portfolio__content__info:hover {
+  background-size: 300%;
+}

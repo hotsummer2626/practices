@@ -1,0 +1,16 @@
+.container .bottom__nextfivedays__day {
+  text-align: center;
+  font-size: 20px;
+}
+
+.container .bottom__nextfivedays__day span {
+  width: 100%;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  display: block;
+  text-align: center;
+}
+
+.container .bottom__nextfivedays__day span i {
+  font-size: 30px;
+}

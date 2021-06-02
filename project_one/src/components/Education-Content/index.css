@@ -1,0 +1,46 @@
+.education__content__info {
+  width: 28%;
+  margin-bottom: 50px;
+  padding-top: 9px;
+  position: relative;
+}
+
+.education__content__info .icon {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: yellow;
+  position: absolute;
+  left: -50px;
+  top: 0;
+}
+
+.education__content__info .line {
+  width: 2px;
+  height: 135px;
+  background-color: #fff;
+  position: absolute;
+  left: -31px;
+  top: 40px;
+}
+
+.education__content__info .year {
+  width: 80px;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  text-align: center;
+  color: #fff;
+  background-color: #242424;
+}
+
+.education__content__info h3 {
+  font-size: 20px;
+  color: #fff;
+}
+
+.education__content__info p {
+  font-size: 15px;
+  color: #fff;
+}
