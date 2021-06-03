@@ -6,7 +6,7 @@ export default class SearchBar extends Component {
   getWeather = () => {
     let cityName = this.cityNameElement.value;
     const defaultUrl = "http://api.openweathermap.org/data/2.5";
-    const apiKey = "e81ba22bb4b265a3f48520919ab1e382";
+    const apiKey = "";
     this.props.updateWeather({ loading: true });
     axios.get(`${defaultUrl}/weather?q=${cityName}&appid=${apiKey}`).then(
       (response) => {
