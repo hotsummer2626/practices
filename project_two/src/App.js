@@ -11,8 +11,8 @@ export default class App extends Component {
 
   componentDidMount() {
     const defaultUrl = "http://api.openweathermap.org/data/2.5";
-    const apiKey = "e81ba22bb4b265a3f48520919ab1e382";
-    const apiKey1='c6b62e270cc66f15079796009f3c3769';
+    const apiKey = "";
+    const apiKey1='';
 
     axios
       .get(`${defaultUrl}/weather?id=2147714&units=metric&appid=${apiKey}`)
