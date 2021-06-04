@@ -6,14 +6,15 @@ import "./App.css";
 
 export default class App extends Component {
   state = {
-    weatherIcon: "10d",
-    description: "cloud",
-    temperature: "12",
-    location: "Sydney | au",
-    min: "10",
-    max: "10",
-    humidity: "44",
+    weatherIcon: undefined,
+    description: undefined,
+    temperature: undefined,
+    location: undefined,
+    min: undefined,
+    max: undefined,
+    humidity: undefined,
     loading: false,
+    initial: true,
   };
 
   updateWeather = (newWeatherObj) => {
@@ -28,13 +29,17 @@ export default class App extends Component {
     `;
 
     return (
-      <div className="container">
-        <div className="title">
+      <div
+        className={this.state.temperature > 16 ? "container warm" : "container"}
+      >
+        {/* <div className="title">
           <i className="fa fa-cloud"></i>Weather App
-        </div>
+        </div> */}
         <SearchBar updateWeather={this.updateWeather} />
-        <div className="subtitle">Live weather condition</div>
-        {this.state.loading ? (
+        {/* <div className="subtitle">Live weather condition</div> */}
+        {this.state.initial ? (
+          <h1></h1>
+        ) : this.state.loading ? (
           <div className="loader-container">
             <ScaleLoader
               css={override}

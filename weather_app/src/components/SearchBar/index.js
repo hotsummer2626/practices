@@ -3,10 +3,19 @@ import axios from "axios";
 import "./index.css";
 
 export default class SearchBar extends Component {
-  getWeather = () => {
-    let cityName = this.cityNameElement.value;
+  getWeather = (event) => {
+    const { keyCode, target } = event;
+    let cityName = target.value;
+    if (keyCode !== 13) return;
+    if (cityName.trim() === "") {
+      alert("input cannot be empty!!!");
+      return;
+    }
+
+    this.props.updateWeather({ initial: false });
     const defaultUrl = "http://api.openweathermap.org/data/2.5";
-    const apiKey = "";
+    const apiKey = "e81ba22bb4b265a3f48520919ab1e382";
+
     this.props.updateWeather({ loading: true });
     axios.get(`${defaultUrl}/weather?q=${cityName}&appid=${apiKey}`).then(
       (response) => {
@@ -26,7 +35,7 @@ export default class SearchBar extends Component {
       (error) => {
         alert(error.message);
         this.props.updateWeather({ loading: false });
-        this.cityNameElement.value = "";
+        target.value = "";
       }
     );
   };
@@ -35,14 +44,14 @@ export default class SearchBar extends Component {
     return (
       <div className="form">
         <input
-          ref={(c) => (this.cityNameElement = c)}
+          onKeyUp={this.getWeather}
           type="text"
           name="city"
           placeholder="please enter city name"
         />
-        <button onClick={this.getWeather} className="search">
+        {/* <button onClick={this.getWeather} className="search">
           Search
-        </button>
+        </button> */}
       </div>
     );
   }
