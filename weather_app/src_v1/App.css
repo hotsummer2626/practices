@@ -6,11 +6,11 @@
 }
 
 .container {
-  width: 900px;
+  width: 360px;
   height: 600px;
   border-radius: 15px;
   padding: 25px;
-  background-image: url(./assets/bg.jpg);
+  background-image: url(./assets/cold-bg.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   transition: all 0.4s ease;
