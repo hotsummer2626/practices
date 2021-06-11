@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { ScaleLoader } from "react-spinners";
 import SearchBar from "./components/SearchBar";
 import WeatherResult from "./components/WeatherResult";
+import CityList from "./components/CityList";
 import "./App.css";
 
 export default class App extends Component {
@@ -15,10 +16,25 @@ export default class App extends Component {
     humidity: undefined,
     loading: false,
     initial: true,
+    cityArr: [],
   };
 
   updateWeather = (newWeatherObj) => {
     this.setState({ ...newWeatherObj });
+  };
+
+  updateCityArr = (newCityObj) => {
+    const { cityArr } = this.state;
+    const newCityArr = [...cityArr, newCityObj];
+    this.setState({ cityArr: newCityArr });
+  };
+
+  deleteCityObj = (id) => {
+    const { cityArr } = this.state;
+    const newCityArr = cityArr.filter((cityObj) => {
+      return cityObj.id !== id;
+    });
+    this.setState({ cityArr: newCityArr });
   };
 
   render() {
@@ -29,14 +45,11 @@ export default class App extends Component {
     `;
 
     return (
-      <div
-        className={this.state.temperature > 16 ? "container warm" : "container"}
-      >
-        {/* <div className="title">
-          <i className="fa fa-cloud"></i>Weather App
-        </div> */}
-        <SearchBar updateWeather={this.updateWeather} />
-        {/* <div className="subtitle">Live weather condition</div> */}
+      <div className="container">
+        <SearchBar
+          updateWeather={this.updateWeather}
+          updateCityArr={this.updateCityArr}
+        />
         {this.state.initial ? (
           <h1></h1>
         ) : this.state.loading ? (
@@ -51,6 +64,7 @@ export default class App extends Component {
         ) : (
           <WeatherResult {...this.state} />
         )}
+        <CityList {...this.state} deleteCityObj={this.deleteCityObj} />
       </div>
     );
   }

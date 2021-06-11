@@ -15,29 +15,25 @@ export default class SearchBar extends Component {
 
     return (
       <div className="weather">
-        <div style={{marginRight:'20px'}}>
-          <div className="weather__location">{location}</div>
-          <div className="weather__temp">{temperature}&deg;</div>
+        <div className="weather__location">{location}</div>
+        <div className="weather__temp">{temperature}&deg;</div>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <div className="weather__icon">
+            <img
+              src={`http://openweathermap.org/img/wn/${weatherIcon}@2x.png`}
+              alt="weather-icon"
+            />
+          </div>
+          <div className="weather__description">{description}</div>
         </div>
-        <div>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <div className="weather__icon">
-              <img
-                src={`http://openweathermap.org/img/wn/${weatherIcon}@2x.png`}
-                alt="weather-icon"
-              />
-            </div>
-            <div className="weather__description">{description}</div>
-          </div>
-          <div className="weather__otherinfo">
-            Min: {min}&deg; | Max: {max}&deg; | humidity: {humidity}%
-          </div>
+        <div className="weather__otherinfo">
+          || Min: {min}&deg; || Max: {max}&deg; || humidity: {humidity}%
         </div>
       </div>
     );

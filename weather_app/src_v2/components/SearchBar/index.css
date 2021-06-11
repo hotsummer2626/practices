@@ -2,11 +2,12 @@
   width: 100%;
   margin: 0 0 75px;
   text-align: center;
+  display: flex;
 }
 
 .container .form input {
   display: block;
-  width: 100%;
+  width: 80%;
   padding: 15px;
   margin-top: -25px;
   background: none;
