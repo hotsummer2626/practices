@@ -35,6 +35,16 @@ async function deleteStudentById(req, res) {
   if (!student) {
     return res.sendStatus(404);
   }
+  await Course.updateMany(
+    {
+      students: student._id,
+    },
+    {
+      $pull: {
+        students: student._id,
+      },
+    }
+  );
   return res.sendStatus(204);
 }
 
@@ -53,7 +63,7 @@ async function addStudentToCourse(req, res) {
   const { id, code } = req.params;
   const student = await Student.findById(id).exec();
   const course = await Course.findById(code).exec();
-  if(!student||!course){
+  if (!student || !course) {
     return res.sendStatus(404);
   }
   student.courses.addToSet(course.code);
@@ -64,10 +74,10 @@ async function addStudentToCourse(req, res) {
 }
 
 async function removeStudentFromCourse(req, res) {
-  const {id,code}=req.params;
+  const { id, code } = req.params;
   const student = await Student.findById(id);
   const course = await Course.findById(code);
-  if(!student||!course){
+  if (!student || !course) {
     return res.sendStatus(404);
   }
   student.courses.pull(course.code);

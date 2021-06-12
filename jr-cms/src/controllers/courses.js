@@ -31,6 +31,16 @@ async function deleteCourseById(req, res) {
   if (!course) {
     res.sendStatus(404);
   }
+  await Student.updateMany(
+    {
+      courses: course._id,
+    },
+    {
+      $pull: {
+        courses: course._id,
+      },
+    }
+  );
   return res.sendStatus(204);
 }
 async function createCourse(req, res) {
@@ -46,6 +56,10 @@ async function createCourse(req, res) {
     allowUnknown: true,
     stripUnknown: true,
   });
+  const existCourse = await Course.findById(code).exec();
+  if (existCourse) {
+    return res.sendStatus(409);
+  }
   const course = new Course({ _id: code, name, description });
   await course.save();
   return res.status(201).json(course);
