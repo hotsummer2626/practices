@@ -5,7 +5,7 @@ const schema = new Schema(
     _id: {
       type: String,
       uppercase: true,
-      alias: "code"
+      alias: "code",
     },
     name: {
       type: String,
@@ -15,9 +15,15 @@ const schema = new Schema(
       type: String,
       default: "This is a description",
     },
+    students: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Student',
+      },
+    ],
     __v: {
       type: Number,
-      select: false
+      select: false,
     },
   },
   {
