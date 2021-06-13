@@ -22,19 +22,14 @@ export default class App extends Component {
   };
 
   render() {
+    const { temperature, initial, loading } = this.state;
     return (
-      <div
-        className={this.state.temperature > 16 ? "container warm" : "container"}
-      >
-        {/* <div className="title">
-          <i className="fa fa-cloud"></i>Weather App
-        </div> */}
+      <div className={temperature > 16 ? "container warm" : "container"}>
         <SearchBar updateWeather={this.updateWeather} />
-        {/* <div className="subtitle">Live weather condition</div> */}
-        {this.state.initial ? (
+        {initial ? (
           <h1></h1>
-        ) : this.state.loading ? (
-          <LoadingElement loading={this.state.loading} />
+        ) : loading ? (
+          <LoadingElement loading={loading} />
         ) : (
           <WeatherResult {...this.state} />
         )}
