@@ -652,7 +652,7 @@ img {
 
 .services__modal-title{
     font-size: var(--h3-font-size);
-    font-weight: car(--font-medium);
+    font-weight: var(--font-medium);
     margin-bottom: var(--mb-1-5);
 }
 
@@ -669,6 +669,7 @@ img {
     color: var(--first-color);
     margin-right: var(--mb-0-25);
 }
+
 /* Active Modal */
 .active-modal{
     opacity: 1;
